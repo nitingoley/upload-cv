@@ -19,7 +19,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:4000/api/v3/signup", {
+      const response = await fetch("https://upload-cv.onrender.com", {
         method: "POST",
         body: formData,
       });
