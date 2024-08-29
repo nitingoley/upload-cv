@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: "*",
+  origin: "https://upload-cv-nine.vercel.app",
   methods: ['GET', 'POST'], // Specify the methods you want to allow
 }));
 // Connect to database
@@ -27,7 +27,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Route for signup
-app.post("/api/v3/signup", upload.single("resume"), async (req, res) => {
+app.post("/", upload.single("resume"), async (req, res) => {
   const { name, email } = req.body;
   const resume = req.file ? req.file.path : null; // Ensure resume is available
   try {
