@@ -19,7 +19,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("https://upload-cv.onrender.com", {
+      const response = await fetch("https://upload-cv-b.vercel.app", {
         method: "POST",
         body: formData,
       });
