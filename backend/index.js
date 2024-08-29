@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: "https://upload-cv-nine.vercel.app",
+  origin: "*",
   methods: ['GET', 'POST'], // Specify the methods you want to allow
 }));
 // Connect to database
